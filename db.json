@@ -251,6 +251,39 @@
       "exam_id": "3",
       "total_Question": "5",
       "id": 11
+    },
+    {
+      "result_status": "Fail",
+      "result_score": 2,
+      "user_email": "isha@gmail.com",
+      "exam_date": "26-4-2023 16:43:39",
+      "exam_name": "Maths",
+      "total_marks": "5",
+      "exam_id": "1",
+      "total_Question": "5",
+      "id": 12
+    },
+    {
+      "result_status": "Fail",
+      "result_score": 0,
+      "user_email": "isha@gmail.com",
+      "exam_date": "26-4-2023 18:39:15",
+      "exam_name": "Maths",
+      "total_marks": "5",
+      "exam_id": "2",
+      "total_Question": "5",
+      "id": 13
+    },
+    {
+      "result_status": "Fail",
+      "result_score": 1,
+      "user_email": "isha@gmail.com",
+      "exam_date": "26-4-2023 18:39:35",
+      "exam_name": "Maths",
+      "total_marks": "5",
+      "exam_id": "1",
+      "total_Question": "5",
+      "id": 14
     }
   ],
   "user": [
@@ -289,6 +322,12 @@
       "user_email": "anubhav@gmail.com",
       "user_password": "anubhav",
       "id": 6
+    },
+    {
+      "user_name": "isha",
+      "user_email": "isha@gmail.com",
+      "user_password": "isha#1234",
+      "id": 7
     }
   ]
 }

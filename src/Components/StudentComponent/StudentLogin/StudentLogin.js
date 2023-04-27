@@ -1,5 +1,4 @@
 
-
   import style from "./StudentLogin.module.css";
 
   import {NavLink , useHistory} from "react-router-dom";
@@ -54,7 +53,7 @@
             <div id={style.container}>
 
                 <div id={style.containerHeadingBox}>
-                    <h1>Student Login</h1>
+                    <h1>USER LOGIN</h1>
                 </div>
 
                <div id={style.emailBox}>

@@ -111,9 +111,9 @@ function Test() {
      let history = useHistory();
 
     return (
-        <>
+        <div id={style.container}>
             <div id={style.displayBoxQuestionHeadingBox}>
-                <h1>Answer all the questions</h1>
+                <h2>Answer all the questions</h2>
             </div>
             {
                  
@@ -153,8 +153,8 @@ function Test() {
                   return <React.Fragment key={i}></React.Fragment>
                 })
             }
-            <div id={style.submitExam}><button onClick={submitTest}>Submit Exam</button></div>
-        </>
+            <div id={style.submitExam}><button  onClick={submitTest}>Submit Exam</button></div>
+        </div>
     );
 }
 

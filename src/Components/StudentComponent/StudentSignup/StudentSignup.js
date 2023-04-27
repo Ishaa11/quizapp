@@ -54,8 +54,7 @@ function StudentSignup() {
         <div id={style.container}>
 
             <div id={style.formHeading}>
-                <h1>Student Signup</h1>
-                <p>Please complete the form below to register with us</p>
+                <h1>REGISTER</h1>
             </div>
 
             <div id={style.nameBox}>
@@ -94,7 +93,7 @@ function StudentSignup() {
 
 
             <div id={style.login}>
-                Have a Account?  <NavLink exact to="/StudentLogin"> Log in</NavLink>
+                Already Have an Account?  <NavLink exact to="/StudentLogin"> Log in!</NavLink>
             </div>
 
 
