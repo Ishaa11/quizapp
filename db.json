@@ -1,7 +1,7 @@
 {
   "admin": [
     {
-      "admin_name": "admin",
+      "admin_name": "admin@gmail.com",
       "admin_password": "1234"
     }
   ],
@@ -251,6 +251,17 @@
       "exam_id": "3",
       "total_Question": "5",
       "id": 11
+    },
+    {
+      "result_status": "Pass",
+      "result_score": 5,
+      "user_email": "ram@gmail.com",
+      "exam_date": "27-4-2023 12:54:15",
+      "exam_name": "Maths",
+      "total_marks": "5",
+      "exam_id": "1",
+      "total_Question": "5",
+      "id": 12
     }
   ],
   "user": [

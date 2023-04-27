@@ -1,89 +1,109 @@
+import style from "./StudentLogin.module.css";
 
+import { NavLink, useHistory } from "react-router-dom";
 
-  import style from "./StudentLogin.module.css";
+import { useState } from "react";
+import axios from "axios";
 
-  import {NavLink , useHistory} from "react-router-dom";
+function StudentLogin() {
+  const [user, setUser] = useState({
+    user_email: "",
+    user_password: "",
+  });
 
-   import {useState} from "react" ;
-   import axios from "axios";
+  function onTextFieldChange(e) {
+    setUser({
+      ...user,
+      [e.target.name]: e.target.value,
+    });
+  }
 
+  let history = useHistory();
 
-     function StudentLogin(){
+  const [check, setCheck] = useState(false);
 
-        const [user , setUser] = useState({
-            user_email:"",
-            user_password:""
-        });
+  async function handleLogin() {
+    let value = await axios.get("http://localhost:3333/user");
 
-        function onTextFieldChange(e){
-            setUser({
-                ...user ,
-                [e.target.name] : e.target.value
-            });
-        }
+    for (let i = 0; i < value.data.length; i++) {
+      if (
+        value.data[i].user_email === user.user_email &&
+        value.data[i].user_password === user.user_password
+      ) {
+        setCheck(true);
+        alert("success");
+        sessionStorage.setItem("user", user.user_email);
+        history.push("/StudentDashboard");
+      }
+    }
+    if (check) alert(" Wrong User Email or password");
+  }
 
+  return (
+    <div id={style.container}>
+      <div id={style.containerHeadingBox}>
+        <h1>USER LOGIN</h1>
+      </div>
 
-          let history = useHistory();
+      <div id={style.emailBox}>
+        <label htmlFor="email">
+          {" "}
+          Email
+          <input
+            style={{ width: "350px" }}
+            name="user_email"
+            onChange={(e) => onTextFieldChange(e)}
+            type="text"
+            id={style.email}
+          />
+        </label>
+      </div>
 
-          const [check, setCheck]  = useState(false);
+      <div id={style.passwordBox}>
+        <label htmlFor="password">
+          {" "}
+          Password
+          <input
+            style={{ width: "350px" }}
+            name="user_password"
+            onChange={(e) => onTextFieldChange(e)}
+            type="password"
+            id={style.password}
+          />
+        </label>
+      </div>
 
+      <button id={style.login} onClick={handleLogin}>
+        Login
+      </button>
 
-      async function handleLogin()
-       {
-          let value  = await axios.get("http://localhost:3333/user");
+      <div style={{ color: "black" }} id={style.signup}>
+        New to Portal?{" "}
+        <button className="btn btn-primary">
+          <NavLink style={{ color: "black" }} exact to="/StudentSignup">
+            {" "}
+            Register
+          </NavLink>
+        </button>
+        <br />
+        <br />
+        <button
+          style={{ height: "40px", justifyContent: "center" }}
+          className="btn btn-dark"
+        >
+          <NavLink
+            style={{ color: "white" }}
+            id={style.goBackLink}
+            exact
+            to="/"
+          >
+            {" "}
+            Go Back
+          </NavLink>
+        </button>
+      </div>
+    </div>
+  );
+}
 
-             for(let i=0 ;i<value.data.length ;i++)
-             {
-                if( value.data[i].user_email === user.user_email &&
-                   value.data[i].user_password === user.user_password)
-                {
-                    setCheck(true);
-                   alert("success");
-                   sessionStorage.setItem("user" , user.user_email);
-                   history.push("/StudentDashboard");
-                }
-             }
-             if(check)
-             alert(" Wrong User Email or password");
-        }
-        
-
-
-
-         return(
-            <div id={style.container}>
-
-                <div id={style.containerHeadingBox}>
-                    <h1>Student Login</h1>
-                </div>
-
-               <div id={style.emailBox}>
-                   <label htmlFor="email"> Email
-                       <input name="user_email" 
-                       onChange={(e) => onTextFieldChange(e)} type="text" id={style.email} />
-                   </label>
-               </div>
-
-
-               <div id={style.passwordBox}>
-                   <label htmlFor="password"> Password
-                     <input name="user_password" 
-                      onChange={(e) => onTextFieldChange(e)} type="password" id={style.password} />
-                   </label>
-               </div>
-
-
-               <button id={style.login} onClick={handleLogin}>Login</button>
-
-
-              <div id={style.signup}>
-                 New to Portal?  <NavLink exact to="/StudentSignup"> Register</NavLink> 
-                 <NavLink id={style.goBackLink} exact to="/"> Go Back</NavLink> 
-              </div>
-
-
-               </div>
-         ); 
-     }
-
-     export default StudentLogin;
+export default StudentLogin;
