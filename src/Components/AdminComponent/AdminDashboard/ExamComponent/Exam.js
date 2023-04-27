@@ -107,18 +107,18 @@
         return (
             <>
                <div id={style.displayHeadingBox}> 
-                    <h2>Exam List</h2>     
+                    <h2>Quiz Categories</h2>     
                </div>
 
-                <div id={style.tableBox}>
-                    <table >
+                <div class="table" id={style.tableBox}>
+                    <table class="table" >
                         <thead >
                             <tr>
-                                <th id={style.center}>Exam Name</th>
-                                <th id={style.center}>Exam Desc.</th>
-                                <th id={style.center}>Exam Creation Date</th>
-                                <th id={style.center}>Exam Level</th>
-                                <th id={style.center}>Options</th>
+                                <th scope="col" id={style.center}>Quiz Name</th>
+                                <th scope="col"id={style.center}>Quiz Desc.</th>
+                                <th scope="col"id={style.center}>Quiz Creation Date</th>
+                                <th scope="col"id={style.center}>Quiz Level</th>
+                                <th scope="col"id={style.center}>Options</th>
                             </tr>
                           </thead>
                           <tbody id={style.tbody}>
@@ -126,24 +126,24 @@
                                   exams.map((data ,i) => {
                                       return(
                                         <tr key={i}>
-                                           <td>{data.exam_name}</td>
+                                           <td scope="row">{data.exam_name}</td>
                                            <td>{data.exam_desc}</td>
                                            <td>{data.exam_date}</td>
                                            <td>{data.exam_level}</td>
                                            <td>
                                                <NavLink exact to={`/AdminDashboard/Exam/Details/${data.id}`}>
-                                                 <button>Details</button>  
+                                                 <button type="button" class="btn btn-primary">Details</button>  
                                                </NavLink> 
 
                                           <NavLink exact to={`/AdminDashboard/Exam/ViewQuestion/${data.id}`}>
-                                                 <button>View Question</button>  
+                                                 <button type="button" class="btn btn-primary">View Question</button>  
                                                </NavLink> 
 
                                              <NavLink exact to={`/AdminDashboard/Exam/AddQuestion/${data.id}`}>
-                                                 <button>Add Question</button>  
+                                                 <button type="button" class="btn btn-primary">Add Question</button>  
                                                </NavLink> 
 
-                                             <button onClick={() => deleteExam(data.id)}>Delete</button>
+                                             <button  type="button" class="btn btn-danger"onClick={() => deleteExam(data.id)}>Delete</button>
                                           </td>
                                         </tr>
                                       );
@@ -155,20 +155,20 @@
                  </div>
 
                  <div id={style.addSubjectBox}>
-                      <button onClick={handleAddExam}>Add Exam</button>
+                      <button onClick={handleAddExam}>Add Quiz</button>
                  </div>
 
                   <div id={style.addBox} style={display}>   
                      <label htmlFor="">Enter Subject Name </label>
                      <input onChange={(e) => handleInput(e)} name="exam_name" type="text" 
-                     placeholder="Enter Subject Name" /> 
+                     placeholder="Enter Quiz Topic"  required/> 
 
-                     <label htmlFor="">Enter Exam desc </label>
+                     <label htmlFor="">Enter Quiz desc </label>
                      <input onChange={(e) => handleInput(e)} name="exam_desc"  type="text" 
-                     placeholder="Enter Exam des" /> 
+                     placeholder="Enter Quiz des" /> 
 
-                     <label htmlFor="">Enter Exam Level </label>
-                      <input onChange={(e) => handleInput(e)} name="exam_level"   type="text" placeholder="Enter Exam Level" /> 
+                     <label htmlFor="">Enter Quiz Level </label>
+                      <input onChange={(e) => handleInput(e)} name="exam_level"   type="text" placeholder="Enter Quiz Level" /> 
 
                       <label htmlFor="">Enter Total Question </label>
                       <input onChange={(e) => handleInput(e)} name="exam_totalQuestion"   

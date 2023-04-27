@@ -4,10 +4,13 @@
 
 
 #displayHeadingBox h1{
-    margin-left: 10px;
+    margin-left: 30px;
+    margin: 15px;
 }
 
-
+.w{
+    width: 50%;
+}
 #box1,
 #box2,
 #box3{
@@ -22,11 +25,19 @@
 
 #box1,
 #box3{
-   background-color: rgba(0, 0, 255, 0.6);
+   background-color: rgba(0, 0, 255, 0.6);;
+   padding: 18px;
+    font-family: fangsong;
+    font-size: 18px;
+    border-radius: 38px;
 }
 
 #box2{
    background-color:rgb(231, 192, 61);
+   padding: 18px;
+   font-family: fangsong;
+   font-size: 18px;
+   border-radius: 38px;
 }
 
 #box1 p,

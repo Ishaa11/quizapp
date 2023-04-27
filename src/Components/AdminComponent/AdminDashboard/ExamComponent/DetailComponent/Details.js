@@ -42,44 +42,44 @@
         return (
             <>
                 <div id={style.displayHeadingBox}> 
-                     <h2>Exam Details</h2>     
+                     <h2>Quiz Details</h2>     
                  </div>
 
                  <div id={style.tableBox}>
                      <table >
                          <thead >
                               <tr>
-                                <th id={style.center}>Exam Name</th>
+                                <th id={style.center}>Quiz Name</th>
                                 <td id={style.center}> {exam.exam_name} </td>
                              </tr>
 
                               <tr>
-                                <th id={style.center}>Exam Description</th>
+                                <th id={style.center}>Quiz Description</th>
                                 <td id={style.center}> {exam.exam_desc} </td>
                               </tr>
 
                                <tr>
-                                  <th id={style.center}>Exam Creation Date</th>
+                                  <th id={style.center}>Quiz Creation Date</th>
                                   <td id={style.center}> {exam.exam_date} </td>
                                </tr>
 
                                <tr>
-                                  <th id={style.center}>Exam TotalMarks</th>
+                                  <th id={style.center}>Quiz TotalMarks</th>
                                   <td id={style.center}> {exam.exam_marks} </td>
                                </tr>
 
                                <tr>
-                                  <th id={style.center}>Exam TotalQuestion</th>
+                                  <th id={style.center}>Quiz TotalQuestion</th>
                                   <td id={style.center}> {exam.exam_totalQuestion} </td>
                                </tr>
 
                                <tr>
-                                  <th id={style.center}>Exam PassMarks</th>
+                                  <th id={style.center}>Quiz PassMarks</th>
                                   <td id={style.center}> {exam.exam_passMarks} </td>
                                </tr>
 
                                <tr>
-                                  <th id={style.center}>Exam Level</th>
+                                  <th id={style.center}>Quiz Level</th>
                                   <td id={style.center}> {exam.exam_level} </td>
                                </tr>
                             </thead>
@@ -87,7 +87,7 @@
                      </div>
 
                     <div id={style.addSubjectBox}>
-                       <button onClick={handleGoBack}>Go Back</button>
+                       <button type="button" class="btn btn-info" onClick={handleGoBack}>Go Back</button>
                    </div>
             </>
         );

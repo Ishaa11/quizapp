@@ -46,16 +46,16 @@
                    <h2>Student Exam List</h2>     
                 </div>
 
-                <div id={style.tableBox}>
-                    <table>
+                <div class="table" >
+                    <table  className="table">
                        <thead>
                           <tr>
-                             <th id={style.center}>User Email</th>
-                              <th id={style.center}>Exam Name</th>
-                              <th id={style.center}>Exam Date</th>
-                              <th id={style.center}>Result Status</th>
-                              <th id={style.center}>Total Marks</th>
-                              <th id={style.center}>Result Score</th>  
+                             <th scope="col"id={style.center}>User Email</th>
+                              <th scope="col" id={style.center}>Exam Name</th>
+                              <th scope="col"id={style.center}>Exam Date</th>
+                              <th scope="col"id={style.center}>Result Status</th>
+                              <th scope="col"id={style.center}>Total Marks</th>
+                              <th scope="col"id={style.center}>Result Score</th>  
                            </tr>
                         </thead>
                         <tbody>
@@ -64,7 +64,7 @@
                                     if(data.user_email === email)
                                     return(
                                           <tr key={i}>
-                                              <td>{data.user_email}</td>
+                                              <td scope="row">{data.user_email}</td>
                                               <td>{data.exam_name}</td>
                                               <td>{data.exam_date}</td>
                                               <td>{data.result_status}</td>

@@ -54,16 +54,35 @@
 
          return(
              <>
-                           <div id={style.displayHeadingBox}> 
+                           <div className="container" id={style.displayHeadingBox}> 
                                <h1>Dashboard</h1>     
                            </div>
+                           <div className="card w" >
+  <div class="card-body">
+    <h5 class="card-title">Quiz</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{exam}</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <button type="button" class="btn btn-primary card-link" onClick={showExam}  >View Details</button>
+   
+  </div>
+  <br></br>
+</div>
+<div className="card w" >
+  <div class="card-body">
+    <h5 class="card-title">No of users</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{user}</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <button type="button" class="btn btn-primary card-link" onClick={showUsers}>View Details</button>
+    
+  </div>
+</div>
 
-                            <div id={style.box1}>
+                            {/* <div id={style.box1}>
                                <p id={style.countOfExam}>{exam}</p>
                                    <button onClick={showExam}>View Details</button>
-                            </div>
+                            </div> */}
 
-                              <div id={style.box2}>
+                              {/* <div id={style.box2}>
                                   <p  id={style.countOfQuestion}>{question}</p>
                                    <button onClick={showQuestions}>View Details</button> 
                               </div>
@@ -71,7 +90,7 @@
                               <div id={style.box3}>
                                   <p id={style.countOfUser}>{user}</p>
                                     <button onClick={showUsers} >View Details</button>
-                              </div>
+                              </div> */}
                              
              </>
          );

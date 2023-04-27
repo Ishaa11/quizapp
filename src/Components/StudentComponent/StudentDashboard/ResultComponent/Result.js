@@ -23,15 +23,15 @@ function Result() {
     return (
         <>
             <div id={style.displayHeadingBox}>
-                <h2>Student Exam List</h2>
+                <h2> Scores</h2>
             </div>
             <div id={style.tableBox}>
                 <table >
                     <thead>
                         <tr>
                              <th id={style.center}>User Email</th>
-                             <th id={style.center}>Exam Name</th>
-                             <th id={style.center}>Exam Date</th>
+                             <th id={style.center}>Quiz Name</th>
+                             <th id={style.center}>Quiz Date</th>
                              <th id={style.center}>Result Status</th>
                              <th id={style.center}>Your Score</th>  
                              <th id={style.center}>Total Marks</th>

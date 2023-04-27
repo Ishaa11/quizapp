@@ -1,7 +1,7 @@
 {
   "admin": [
     {
-      "admin_name": "admin",
+      "admin_name": "admin@gmail.com",
       "admin_password": "1234"
     }
   ],
@@ -17,6 +17,10 @@
     {
       "subject_name": "cricket",
       "id": 4
+    },
+    {
+      "subject_name": "program",
+      "id": 5
     }
   ],
   "Exam": [
@@ -49,6 +53,26 @@
       "exam_marks": "20",
       "exam_date": "25-4-2023 18:54:41",
       "id": 3
+    },
+    {
+      "exam_name": "program",
+      "exam_desc": "program",
+      "exam_level": "medium",
+      "exam_passMarks": "10",
+      "exam_totalQuestion": "5",
+      "exam_marks": "50",
+      "exam_date": "27-4-2023 14:45:0",
+      "id": 4
+    },
+    {
+      "exam_name": "java",
+      "exam_desc": "",
+      "exam_level": "",
+      "exam_passMarks": "",
+      "exam_totalQuestion": "",
+      "exam_marks": "",
+      "exam_date": "27-4-2023 14:48:17",
+      "id": 5
     }
   ],
   "Question": [
@@ -251,6 +275,39 @@
       "exam_id": "3",
       "total_Question": "5",
       "id": 11
+    },
+    {
+      "result_status": "Fail",
+      "result_score": 1,
+      "user_email": "sakshi@gmail.com",
+      "exam_date": "26-4-2023 18:11:43",
+      "exam_name": "Maths",
+      "total_marks": "5",
+      "exam_id": "1",
+      "total_Question": "5",
+      "id": 12
+    },
+    {
+      "result_status": "Pass",
+      "result_score": 5,
+      "user_email": "sakshi@gmail.com",
+      "exam_date": "27-4-2023 14:43:47",
+      "exam_name": "Maths",
+      "total_marks": "5",
+      "exam_id": "1",
+      "total_Question": "5",
+      "id": 13
+    },
+    {
+      "result_status": "Pass",
+      "result_score": 5,
+      "user_email": "sakshi@gmail.com",
+      "exam_date": "27-4-2023 15:13:31",
+      "exam_name": "Maths",
+      "total_marks": "5",
+      "exam_id": "1",
+      "total_Question": "5",
+      "id": 14
     }
   ],
   "user": [

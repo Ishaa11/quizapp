@@ -29,7 +29,7 @@
                    </div>
 
                    <div id={style.tableBox}>
-                      <table>
+                      <table className="table">
                          <thead>
                            <tr>
                                <th id={style.center}>Question Name</th>

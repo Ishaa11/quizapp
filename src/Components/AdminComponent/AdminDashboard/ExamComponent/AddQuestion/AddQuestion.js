@@ -89,8 +89,8 @@ import axios from "axios";
                           type="text" placeholder="Enter Subject" /> 
 
                        <div id={style.buttonBox}>
-                         <button onClick={addnewQuestion} >Add</button>
-                         <button onClick={handleGoBack}>Go back</button>
+                         <button type="button" class="btn btn-success" onClick={addnewQuestion} >Add</button>
+                         <button type="button" class="btn btn-primary" onClick={handleGoBack}>Go back</button>
                        </div>
 
                    </div>

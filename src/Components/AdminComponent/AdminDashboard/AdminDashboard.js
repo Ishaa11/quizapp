@@ -56,12 +56,12 @@
                            <img src= {pic4} alt="" />
                          </div>
 
-                         <div id={style.sideMenubarList}>
-                            <NavLink exact className={style.removeUnderline} to="/AdminDashboard/Subject"> <button > <span>  Subject </span></button></NavLink>
-                            <NavLink exact className={style.removeUnderline} to="/AdminDashboard/Exam"> <button > <span>  Exam </span></button></NavLink>
-                            <NavLink exact className={style.removeUnderline} to="/AdminDashboard/Question"> <button > <span>  Question </span></button></NavLink>
-                            <NavLink exact className={style.removeUnderline} to="/AdminDashboard/Result"> <button > <span>  Result </span></button></NavLink>
-                            <NavLink exact className={style.removeUnderline} to="/AdminDashboard/StudentList"> <button > <span>  StudentList </span></button></NavLink>
+                         <div className="navbar-nav" id={style.sideMenubarList}>
+                            {/* <NavLink exact   to="/AdminDashboard/Subject"> <button > <span>  Categories </span></button></NavLink> */}
+                            <NavLink exact  to="/AdminDashboard/Exam"> <button > <span> Quiz Categories</span></button></NavLink>
+                            {/* <NavLink exact  to="/AdminDashboard/Question"> <button > <span>  Question </span></button></NavLink> */}
+                            <NavLink exact  to="/AdminDashboard/Result"> <button > <span>  Result </span></button></NavLink>
+                            <NavLink exact  to="/AdminDashboard/StudentList"> <button > <span>  Users List </span></button></NavLink>
                         </div>
                     </div>
 

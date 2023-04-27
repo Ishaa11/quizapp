@@ -147,8 +147,8 @@
                                                   <td>{data.option_four}</td>
                                                   <td>{data.question_answer}</td>
                                                   <td>
-                                                    <button onClick={()=>handleEditQuestion(data.id)}>Edit</button>
-                                                    <button  onClick={()=>deleteQuestion(data.id)}>Delete</button>
+                                                    <button type="button" class="btn btn-primary" onClick={()=>handleEditQuestion(data.id)}>Edit</button>
+                                                    <button  type="button" class="btn btn-primary" onClick={()=>deleteQuestion(data.id)}>Delete</button>
                                                   </td>
                                               </tr>
                                             );

@@ -21,17 +21,17 @@
 
          return (
              <>
-               <div id={style.displayHeadingBox}> 
-                   <h2>Student List</h2>     
+               <div className="container" id={style.displayHeadingBox}> 
+                   <h2>User List</h2>     
                 </div>
 
                 <div id={style.tableBox}>
-                   <table>
+                   <table className="table">
                       <thead>
                          <tr>
-                            <th id={style.center}>User Name</th>
-                            <th id={style.center}>User Email</th>
-                            <th id={style.center}>Options</th>
+                            <th scope="col" id={style.center}>User Name</th>
+                            <th scope="col"id={style.center}>User Email</th>
+                            <th scope="col"id={style.center}>Options</th>
                          </tr>
                        </thead>
                        <tbody>
@@ -39,11 +39,11 @@
                            students.map((data , i) => {
                              return(
                               <tr key={i}>
-                                 <td>{data.user_name}</td> 
+                                 <td scope="row">{data.user_name}</td> 
                                  <td>{data.user_email}</td> 
                                  <td>
                                    <NavLink exact to={`/AdminDashboard/StudentList/Details/${data.id}`}>
-                                     <button>View Result</button> 
+                                     <button type="button" class="btn btn-primary">View Result</button> 
                                    </NavLink>
                                    </td>
                              </tr>

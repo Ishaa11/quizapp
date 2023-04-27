@@ -85,18 +85,18 @@ import style from "./Subject.module.css";
                                 <div id={style.content}>
 
                                         <div id={style.displayHeadingBox}> 
-                                              <h2>No Subject Available</h2>     
+                                              <h2>No Quiz Available</h2>     
                                          </div>
 
                                        <div id={style.addSubjectBox}>
-                                           <button onClick={handleAddSubject}>Add Subject</button>
+                                           <button onClick={handleAddSubject}>Add Category</button>
                                        </div>
 
                                         {/* Add Subject */}
 
 
                                         <div id={style.addBox} style={display} >   
-                                           <label htmlFor="">Enter Subject </label> 
+                                           <label htmlFor="">Enter Category </label> 
                                             <input onChange={(e)=>handleInput(e)}  type="text" placeholder="Enter Subject name" /> 
 
                                           <div id={style.buttonBox}>
@@ -115,14 +115,14 @@ import style from "./Subject.module.css";
             <div id={style.content}>
 
                   <div id={style.displayHeadingBox}> 
-                      <h2>Subject List</h2>     
+                      <h2> Quiz Category</h2>     
                  </div>
 
                  <div id={style.tableBox}>
-                     <table >
+                     <table className="table" >
                          <thead>
                             <tr>
-                               <th id={style.center}>Subject Name</th>
+                               <th id={style.center}>Quiz Name</th>
                                 <th id={style.center}>Options</th>
                             </tr>
                          </thead>
@@ -132,7 +132,7 @@ import style from "./Subject.module.css";
                                     return(
                                         <tr key={i}>
                                            <td>{data.subject_name}</td>
-                 <td><button onClick={ () => deleteSubject(data.id) }>Delete</button></td>
+                 <td><button  type="button" class="btn btn-primary" onClick={ () => deleteSubject(data.id) }>Delete</button></td>
                                        </tr>
                                     );
                                    
@@ -145,19 +145,19 @@ import style from "./Subject.module.css";
                   </div>
 
                   <div id={style.addSubjectBox}>
-                       <button onClick={handleAddSubject}>Add Subject</button>
+                       <button type="button" class="btn btn-success" onClick={handleAddSubject}>Add Category</button>
                    </div>
 
                    {/* Add Subject */}
 
                 
                    <div id={style.addBox} style={display} >   
-                       <label htmlFor="">Enter Subject </label> 
-                       <input onChange={(e)=>handleInput(e)}  type="text" placeholder="Enter Subject name" /> 
+                       <label htmlFor="">Enter Category Name </label> 
+                       <input onChange={(e)=>handleInput(e)}  type="text" placeholder="Enter Category name" /> 
 
                        <div id={style.buttonBox}>
-                          <button onClick={handleAddNewSubject}  >Add</button>
-                          <button onClick={handleCloseAdd} >Close</button>
+                          <button type="button" class="btn btn-primary"onClick={handleAddNewSubject}  >Add</button>
+                          <button type="button" class="btn btn-danger"onClick={handleCloseAdd} >Close</button>
                         </div>
                    </div>
                    

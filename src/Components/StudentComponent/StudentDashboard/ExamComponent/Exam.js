@@ -23,7 +23,7 @@ function Exam() {
     return (
         <>
             <div id={style.displayBoxHeadingBox}>
-                <h1>All {category} Exam</h1>
+                <h1>All {category} Quizes</h1>
             </div>
             {
                 allExam.map((data, i) => {
@@ -31,13 +31,13 @@ function Exam() {
                     return (
                         <div id={style.displayBoxExamBox} key={i}>
                             <div id={style.div1}> <span>{data.exam_name}</span> </div>
-                            <div id={style.div2}> <span>Exam ID: {data.id}</span> </div>
-                            <div id={style.div2}> <span>Exam Description: {data.exam_desc}</span> </div>
+                            <div id={style.div2}> <span>Quiz ID: {data.id}</span> </div>
+                            <div id={style.div2}> <span>Quiz Description: {data.exam_desc}</span> </div>
                             <div id={style.div3}><span>Pass Marks:{data.exam_passMarks}</span> </div>
                             <div id={style.div4}><span>Total Marks:{data.exam_marks}</span></div>
                             <div id={style.div5}>
                               <NavLink exact to={`/StudentDashboard/Exam/Maths/${data.id}`}>
-                                 <button>Go to Exam</button>
+                                 <button>Go to Quiz</button>
                                </NavLink>
                             </div>
                         </div>

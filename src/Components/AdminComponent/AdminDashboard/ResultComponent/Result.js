@@ -24,20 +24,20 @@
         return (
             <>
                <div id={style.displayHeadingBox}> 
-                   <h2>Exam List</h2>     
+                   <h2>Result List</h2>     
                 </div>
 
-                <div id={style.tableBox}>
-                    <table>
+                <div class="table">
+                    <table className="table">
                        <thead>
                            <tr>
-                             <th id="center">User Email</th>
-                             <th id="center">Exam Name</th>
-                             <th id="center">Exam Date</th>
-                             <th id="center">Result Status</th>
-                             <th id="center">Your Score</th>  
-                             <th id="center">Total Marks</th>
-                             <th id="center">Total Question</th>  
+                             <th scope="col" id="center">User Email</th>
+                             <th scope="col"id="center">Quiz Name</th>
+                             <th scope="col"id="center">Quiz Date</th>
+                             <th scope="col"id="center">Result Status</th>
+                             <th scope="col"id="center">Your Score</th>  
+                             <th scope="col"id="center">Total Marks</th>
+                             <th scope="col"id="center">Total Question</th>  
                           </tr>
                         </thead>
                         <tbody>
@@ -45,7 +45,7 @@
                                 results.map((data , i) => {
                                     return(
                                           <tr key={i}>
-                                              <td>{data.user_email}</td>
+                                              <td scope="row">{data.user_email}</td>
                                               <td>{data.exam_name}</td>
                                               <td>{data.exam_date}</td>
                                               <td>{data.result_status}</td>

@@ -24,7 +24,7 @@
          return (
                <>
                   <div id={style.displayBoxHeadingBox}>
-                       <h1>Choose Subjects</h1>
+                       <h1>Choose Categories</h1>
                   </div>
 
                   {
@@ -38,7 +38,7 @@
 
                                 <div id={style.subjectButton}>
                                      <NavLink exact to={`/StudentDashboard/Exam/${data.subject_name}`}> 
-                                       <button>Go to Exam</button>
+                                       <button>Go to Quiz</button>
                                      </NavLink>
                                 </div>
                            </div>

@@ -37,11 +37,11 @@ import Test from "./TestComponent/Test";
                  <div id={style.header}>
                 
                       <div id={style.headerHeadingBox}>
-                          <h3>Quiz App</h3> 
+                          <h3>Quiz App </h3> 
                       </div>
 
                         <div id={style.headerMenuBox}>
-                            <NavLink exact to="/StudentDashboard"> <span>Subject</span> </NavLink>
+                            <NavLink exact to="/StudentDashboard"> <span>Categories</span> </NavLink>
                             <NavLink exact to="/StudentDashboard/Result"> <span>My Result</span></NavLink>
                             <NavLink onClick={logout} exact to="/StudentLogin"> <span>Logout</span> </NavLink>
                        </div>
